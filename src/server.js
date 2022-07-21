@@ -45,8 +45,8 @@ app.post("/email", async (req, res) => {
   var mailOptions = {
     from: `"Nathan Drake" <${process.env.OUTLOOK_USERNAME}>`, // sender address (who sends)
     to, // list of receivers (who receives)
-    subject: "Hello", // Subject line
-    text: "Hello world", // plaintext body
+    subject: "Boas-Vindas!", // Subject line
+    text: "...", // plaintext body
     html: emailTemplate.replace("{{name}}", name), // html body
   };
 
