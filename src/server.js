@@ -34,6 +34,12 @@ var transporter = nodemailer.createTransport({
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status(200).send({
+    message: "Hello World",
+  });
+});
+
 app.post("/email", async (req, res) => {
   const { to, name } = req.body;
   var mailOptions = {
