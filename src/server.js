@@ -47,7 +47,7 @@ app.post("/email", async (req, res) => {
     to, // list of receivers (who receives)
     subject: "Boas-Vindas!", // Subject line
     text: "...", // plaintext body
-    html: emailTemplate.replace("{{name}}", name), // html body
+    html: emailTemplate.replace("!{{name}}", name), // html body
   };
 
   // send mail with defined transport object
